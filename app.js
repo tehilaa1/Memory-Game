@@ -6,16 +6,16 @@ let shuffled = cards.sort(() => Math.random() - 0.5);
 
 let first = null;
 let second = null;
-let numoflevel=1;// סופר שלבים
+let numoflevel=1;
 let matched = [];
 let canClick = true;
 let tries = 0;
 let bgMusic = new Audio("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3");
-bgMusic.loop = true;   // 🔁 שיחזור כל הזמן
-bgMusic.volume = 0.3;  // 🔉 חלש כדי שלא יפריע
+bgMusic.loop = true;  
+bgMusic.volume = 0.3;  
 let musicStarted = false;
 let clickSound = new Audio("https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3");
-clickSound.preload = "auto"; // מבטיח שהדפדפן יוריד את הקובץ מיד
+clickSound.preload = "auto"; 
 let muted=true;
 
 function render() {
@@ -43,10 +43,10 @@ function render() {
      html += `<button onclick="flip(${index})">+</button>`;
     }
 
-  }); // ✔ סגירת forEach
+  });  //  close forEach
 
   document.getElementById("game").innerHTML = html;
-} // ✔ סגירת render
+} //  close render
 
 
 
@@ -76,9 +76,9 @@ function toggleMute() {
   muted = !muted;
 
   if (muted) {
-    bgMusic.pause(); // עוצר מיד
+    bgMusic.pause(); 
   } else {
-    // אם רוצים להמשיך מוזיקה
+    // 
     if (musicStarted) {
       bgMusic.play();
     }
